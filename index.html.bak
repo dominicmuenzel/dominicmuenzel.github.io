@@ -596,7 +596,7 @@ url('https://dominicmuenzel.github.io/img/headers/Picture2.jpg');
 
 
 
-<a class="btn btn-primary btn-outline btn-xs" href="https://reader.elsevier.com/reader/sd/pii/S0743016717310112?token=57768260EDC616713E3F17DAB65830BF0BB7F4BD81657189883790066F13120C8FE5EA86617F74B3316E35C638CB0ABE&originRegion=eu-west-1&originCreation=20211213123556" target="_blank" rel="noopener">
+<a class="btn btn-primary btn-outline btn-xs" href="https://reader.elsevier.com/reader/sd/pii/S0743016717310112?token=57768260EDC616713E3F17DAB65830BF0BB7F4BD81657189883790066F13120C8FE5EA86617F74B3316E35C638CB0ABE&originRegion=eu-west-1&originCreation=20211213123556.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
@@ -1015,15 +1015,14 @@ url('https://dominicmuenzel.github.io/img/headers/Picture2.jpg');
     
   </div>
   <div class="col-xs-12 col-md-8">
-    <p>Courses in which I aided teaching at Stellenbosch University:</p>
+    <p>Courses in which I aided teaching at the University of Leeds:</p>
 
 <ul>
-<li>Cell Biology (1st year course)</li>
-<li>Functional Biology (1st year course)</li>
-<li>Evolutionary Patterns &amp; Processes (3rd year course)</li>
-<li>Ecology Field Course (3rd year course)</li>
-<li>Population genomics in R (Honours practical session)</li>
-<li>Science Communication (Honours short course)</li>
+<li>Population and Community Ecology (1st year course)</li>
+<li>Advanced Topics in Conservation Science (2nd year course)</li>
+<li>Introduction to GIS Skills for Ecologists (3rd year course)</li>
+<li>Practical Bioinformatics(Masters course)</li>
+
 </ul>
 
   </div>
