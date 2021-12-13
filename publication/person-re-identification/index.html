@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 2.4.0">
+  <meta name="generator" content="Hugo 0.46" />
+  <meta name="author" content="Erica S. Nielsen">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="Genomic tools are increasingly being used on non-model organisms to provide insights into population structure and variability, including signals of selection. However, most studies are carried out in regions with distinct environmental gradients or across large geographical areas, in which local adaptation is expected to occur. Therefore, the focus of this study is to characterize genomic variation and selective signals over short geographic areas within a largely homogeneous region. To assess adaptive signals between microhabitats within the rocky shore, we compared genomic variation between the Cape urchin (Parechinus angulosus), which is a low to mid-shore species, and the Granular limpet (Scutellastra granularis), a high shore specialist. Using pooled restriction site associated DNA (RAD) sequencing, we described patterns of genomic variation and identified outlier loci in both species. We found relatively low numbers of outlier SNPs within each species, and identified outlier genes associated with different selective pressures than those previously identified in studies conducted over larger environmental gradients. The number of population-specific outlier loci differed between species, likely owing to differential selective pressures within the intertidal environment. Interestingly, the outlier loci were highly differentiated within the two northernmost populations for both species, suggesting that unique evolutionary forces are acting on marine invertebrates within this region. Our study provides a background for comparative genomic studies focused on non-model species, as well as a baseline for the adaptive potential of marine invertebrates along the South African west coast. We also discuss the caveats associated with Pool-seq and potential biases of sequencing coverage on downstream genomic metrics. The findings provide evidence of species-specific selective pressures within a homogeneous environment, and suggest that selective forces acting on small scales are just as crucial to acknowledge as those acting on larger scales. As a whole, our findings imply that future population genomic studies should expand from focusing on model organisms and/or studying heterogeneous regions to better understand the evolutionary processes shaping current and future biodiversity patterns, particularly when used in a comparative phylogeographic context.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://esnielsen.github.io/publication/person-re-identification/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="https://esnielsen.github.io/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="https://esnielsen.github.io/index.xml" type="application/rss+xml" title="">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://esnielsen.github.io/publication/person-re-identification/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@https://twitter.com/erica_at_work">
+  <meta property="twitter:creator" content="@https://twitter.com/erica_at_work">
+  
+  <meta property="og:site_name" content="">
+  <meta property="og:url" content="https://esnielsen.github.io/publication/person-re-identification/">
+  <meta property="og:title" content="Complex signatures of genomic variation of two non-model marine species in a homogeneous environment | ">
+  <meta property="og:description" content="Genomic tools are increasingly being used on non-model organisms to provide insights into population structure and variability, including signals of selection. However, most studies are carried out in regions with distinct environmental gradients or across large geographical areas, in which local adaptation is expected to occur. Therefore, the focus of this study is to characterize genomic variation and selective signals over short geographic areas within a largely homogeneous region. To assess adaptive signals between microhabitats within the rocky shore, we compared genomic variation between the Cape urchin (Parechinus angulosus), which is a low to mid-shore species, and the Granular limpet (Scutellastra granularis), a high shore specialist. Using pooled restriction site associated DNA (RAD) sequencing, we described patterns of genomic variation and identified outlier loci in both species. We found relatively low numbers of outlier SNPs within each species, and identified outlier genes associated with different selective pressures than those previously identified in studies conducted over larger environmental gradients. The number of population-specific outlier loci differed between species, likely owing to differential selective pressures within the intertidal environment. Interestingly, the outlier loci were highly differentiated within the two northernmost populations for both species, suggesting that unique evolutionary forces are acting on marine invertebrates within this region. Our study provides a background for comparative genomic studies focused on non-model species, as well as a baseline for the adaptive potential of marine invertebrates along the South African west coast. We also discuss the caveats associated with Pool-seq and potential biases of sequencing coverage on downstream genomic metrics. The findings provide evidence of species-specific selective pressures within a homogeneous environment, and suggest that selective forces acting on small scales are just as crucial to acknowledge as those acting on larger scales. As a whole, our findings imply that future population genomic studies should expand from focusing on model organisms and/or studying heterogeneous regions to better understand the evolutionary processes shaping current and future biodiversity patterns, particularly when used in a comparative phylogeographic context."><meta property="og:image" content="https://esnielsen.github.io/img/Picture3.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-05-01T00:00:00-07:00">
+  
+  <meta property="article:modified_time" content="2018-05-01T00:00:00-07:00">
+  
+
+  
+
+  
+
+  <title>Complex signatures of genomic variation of two non-model marine species in a homogeneous environment | </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Tutorials</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/files/ESN.CV.2020.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/">
+            
+            <span></span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+
+  
+<div class="article-header">
+  
+  
+    <img src="/img/Picture3.png" class="article-banner" itemprop="image">
+  
+
+  
+</div>
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Complex signatures of genomic variation of two non-model marine species in a homogeneous environment</h1>
+    <span class="pub-authors" itemprop="author">
+      
+      ES Nielsen, R Henriques, RJ Toonen, ISS Knapp, B Guo, S von der Heyden
+      
+    </span>
+    <span class="pull-right">
+      
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Complex%20signatures%20of%20genomic%20variation%20of%20two%20non-model%20marine%20species%20in%20a%20homogeneous%20environment&amp;url=https%3a%2f%2fesnielsen.github.io%2fpublication%2fperson-re-identification%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fesnielsen.github.io%2fpublication%2fperson-re-identification%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fesnielsen.github.io%2fpublication%2fperson-re-identification%2f&amp;title=Complex%20signatures%20of%20genomic%20variation%20of%20two%20non-model%20marine%20species%20in%20a%20homogeneous%20environment"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fesnielsen.github.io%2fpublication%2fperson-re-identification%2f&amp;title=Complex%20signatures%20of%20genomic%20variation%20of%20two%20non-model%20marine%20species%20in%20a%20homogeneous%20environment"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Complex%20signatures%20of%20genomic%20variation%20of%20two%20non-model%20marine%20species%20in%20a%20homogeneous%20environment&amp;body=https%3a%2f%2fesnielsen.github.io%2fpublication%2fperson-re-identification%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    </span>
+
+    
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract" itemprop="text">Genomic tools are increasingly being used on non-model organisms to provide insights into population structure and variability, including signals of selection. However, most studies are carried out in regions with distinct environmental gradients or across large geographical areas, in which local adaptation is expected to occur. Therefore, the focus of this study is to characterize genomic variation and selective signals over short geographic areas within a largely homogeneous region. To assess adaptive signals between microhabitats within the rocky shore, we compared genomic variation between the Cape urchin (Parechinus angulosus), which is a low to mid-shore species, and the Granular limpet (Scutellastra granularis), a high shore specialist. Using pooled restriction site associated DNA (RAD) sequencing, we described patterns of genomic variation and identified outlier loci in both species. We found relatively low numbers of outlier SNPs within each species, and identified outlier genes associated with different selective pressures than those previously identified in studies conducted over larger environmental gradients. The number of population-specific outlier loci differed between species, likely owing to differential selective pressures within the intertidal environment. Interestingly, the outlier loci were highly differentiated within the two northernmost populations for both species, suggesting that unique evolutionary forces are acting on marine invertebrates within this region. Our study provides a background for comparative genomic studies focused on non-model species, as well as a baseline for the adaptive potential of marine invertebrates along the South African west coast. We also discuss the caveats associated with Pool-seq and potential biases of sequencing coverage on downstream genomic metrics. The findings provide evidence of species-specific selective pressures within a homogeneous environment, and suggest that selective forces acting on small scales are just as crucial to acknowledge as those acting on larger scales. As a whole, our findings imply that future population genomic studies should expand from focusing on model organisms and/or studying heterogeneous regions to better understand the evolutionary processes shaping current and future biodiversity patterns, particularly when used in a comparative phylogeographic context.</p>
+    
+
+    
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Type</div>
+          <div class="col-xs-12 col-sm-9">
+            
+            <a href="https://esnielsen.github.io/publication/#2">
+              Journal article
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
+          <div class="col-xs-12 col-sm-9">In <em>BMC Genomics</em>.</div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+    
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
+          <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+            May, 2018
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    <div class="row" style="padding-top: 10px">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
+          <div class="col-xs-12 col-sm-9">
+
+            
+
+
+
+
+<a class="btn btn-primary btn-outline" href="https://bmcgenomics.biomedcentral.com/track/pdf/10.1186/s12864-018-4721-y" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline" href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-4721-y" target="_blank" rel="noopener">
+  Source Document
+</a>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
+
+    
+
+
+
+
+
+  </div>
+</div>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+
+    
+    <p class="powered-by">
+      <a href="https://esnielsen.github.io/privacy/">Privacy Policy</a>
+    </p>
+    
+
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//esnielsen-github-io-1.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    <script src="/js/search.js"></script>
+    
+
+    
+    
+
+  </body>
+</html>
+
